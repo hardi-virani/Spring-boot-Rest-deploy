@@ -1,4 +1,4 @@
-package com.star.spring_boot_rest;
+package com.star.JobApp.spring_boot_rest;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
