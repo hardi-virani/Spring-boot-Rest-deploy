@@ -1,4 +1,4 @@
-package com.star.JobApp.model;
+package com.star.spring_boot_rest.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

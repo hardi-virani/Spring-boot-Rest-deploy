@@ -1,7 +1,7 @@
-package com.star.JobApp.service;
+package com.star.spring_boot_rest.service;
 
-import com.star.JobApp.model.JobPost;
-import com.star.JobApp.repo.JobRepo;
+import com.star.spring_boot_rest.model.JobPost;
+import com.star.spring_boot_rest.repo.JobRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
