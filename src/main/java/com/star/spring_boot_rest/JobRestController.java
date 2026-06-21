@@ -17,7 +17,8 @@ public class JobRestController {
     private JobService service;
 
 
-    @GetMapping("jobPosts")
+    @GetMapping(path = "jobPosts",  produces = {"application/json"}) // This means, it will only return jSon.
+//    @GetMapping( "jobPosts")
 //    @ResponseBody  //Instead of this we have written @RestController
     public List<JobPost> getAllJobs() {
 //        System.out.println("Endpoint Hit");
@@ -29,7 +30,7 @@ public class JobRestController {
         return service.getJob(postId);
     }
 
-    @PostMapping("jobPost")
+    @PostMapping(path = "jobPost", consumes = {"application/xml"}) //Basically, it will only accept the data in xml. if json, it will throw error.
     public JobPost addJob(@RequestBody JobPost jobPost) {
         service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
