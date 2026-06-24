@@ -53,7 +53,7 @@ public class JobRestController {
         return "deleted";
     }
 
-    //to fetch the data in your database, you judt need to run the localhost:8080/load in postman And then this data will be loaded in the db and can be seen in plugins. Even if you changed something here, you have to do that again and everything will be loaded again in db. or else you can update in postman using other methods as well.
+    //to fetch the data in your database, you just need to run the http://localhost:8080/load in postman And then this data will be loaded in the db and can be seen in plugins. Even if you changed something here, you have to do that again and everything will be loaded again in db. or else you can update in postman using other methods as well.
     @GetMapping("load")
     public String loadData() {
         service.load();
