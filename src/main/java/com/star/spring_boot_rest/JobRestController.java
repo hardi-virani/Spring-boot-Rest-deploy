@@ -51,6 +51,7 @@ public class JobRestController {
     @GetMapping("load")
     public String loadData() {
         service.load();
+        return "load";
     }
 
 }
