@@ -30,6 +30,11 @@ public class JobRestController {
         return service.getJob(postId);
     }
 
+    @GetMapping("jobPosts/keyword/{keyword}")
+    public List<JobPost> searchByKeyword(@PathVariable("keyword") String keyword) {
+       return service.search(keyword);
+    }
+
     @PostMapping(path = "jobPost", consumes = {"application/xml"}) //Basically, it will only accept the data in xml. if json, it will throw error.
     public JobPost addJob(@RequestBody JobPost jobPost) {
         service.addJob(jobPost);
@@ -48,6 +53,7 @@ public class JobRestController {
         return "deleted";
     }
 
+    //to fetch the data in your database, you judt need to run the localhost:8080/load in postman And then this data will be loaded in the db and can be seen in plugins. Even if you changed something here, you have to do that again and everything will be loaded again in db. or else you can update in postman using other methods as well.
     @GetMapping("load")
     public String loadData() {
         service.load();
