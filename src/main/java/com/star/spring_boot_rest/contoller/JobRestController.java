@@ -1,4 +1,4 @@
-package com.star.spring_boot_rest;
+package com.star.spring_boot_rest.contoller;
 
 import com.star.spring_boot_rest.model.JobPost;
 import com.star.spring_boot_rest.service.JobService;
